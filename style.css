@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.111vw;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+body.modal {
+    overflow-y: hidden;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 0 2.68rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 2rem 0;
+    font-size: 1.25rem;
+    color: #00000070;
+}
+
+header::after {
+    content: '';
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    bottom: -18rem;
+    top: 9rem;
+    position: absolute;
+    background: url('./img/image\ 1\ \(1\).png') 100% 0 / 40.6rem 56.5rem no-repeat;
+}
+
+.btn-action {
+    background-color: #FF6600;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.btn-action:hover {
+    background-color: #ffbf48;
+    color: #3b3b3b;
+}
+
+nav {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 12.5rem;
+    height: 0.95rem;
+    background: url('./img/logo\ \(1\).svg') 50% / cover;
+}
+
+.nav-items {
+    display: flex;
+    width: 30.5rem;
+    justify-content: space-around;
+    font-weight: bold;
+    
+}
+.nav-item {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+}
+.nav-item:hover {
+    background: #0000000c;
+}
+
+.hero {
+    margin-top: 18.3rem;
+    width: 43.1rem;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn-calc {
+    width: 12.68rem;
+    height: 5.93rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.more-info {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #00000070;
+    margin-left: 2rem;
+    display: flex;
+    transition: background .2s;
+}
+
+.more-info:hover {
+    color: #000000;
+}
+
+svg path {
+    transition: 0.2s;
+}
+
+.more-info:hover>svg path {
+    fill-opacity: 1;
+}
+
+.more-info svg {
+    animation: anim 0.5s ease-out alternate-reverse infinite;
+}
+
+@keyframes anim {
+    from {
+        margin-left: 2rem;
+    }
+
+    to {
+        margin-left: 1rem;
+    }
+}
+
+main {
+    padding: 20rem 0 0 0;
+}
+
+.our-advant-items {
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.adavnt-item {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.services {
+    margin-top: 2rem;
+}
+
+.services-items {
+    display: grid;
+    grid-template-columns: repeat(3, 28.56rem);
+    grid-template-rows: repeat(2, 18.93rem);
+}
+
+.services-item {
+    border: 0.125rem solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+
+    
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    background-color:  #FF6600;
+    background-blend-mode:multiply;
+   
+    
+
+}
+.services-item:hover {
+    background-size: auto 110%;
+    background-blend-mode:  normal ;
+    background-color: #FF6600;
+}
+.services-item-one {
+    background-image: url('./img/service4.png');
+    
+}
+.services-item-two {
+    background-image: url('./img/service1.png');
+}
+.services-item-three {
+    background-image: url('./img/service2.png');
+}
+.services-item-four {
+    background-image: url('./img/service3.png');
+}
+.services-item-five {
+    background-image: url('./img/service5.png');
+}
+.services-item p {
+    opacity: 0;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.services-item h3 {
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    
+
+}
+
+.services-item:hover p{
+    opacity: 1;
+}
+
+
+.services-item:hover h3 {
+    opacity: 1;
+    
+}
+
+.services-item.title-item {
+    background: #fff;
+}
+
+.about {
+    padding: 7.375rem 0 10.625rem 0;
+    position: relative;
+
+}
+
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 1.25rem;
+    width: 39.31rem;
+}
+
+.about::after {
+    pointer-events: none;
+
+    content: '';
+    top: 0;
+    right: -3rem;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: url('./img/image\ 2\ \(1\).png') 100% 100% / 46.43rem 34.125rem no-repeat;
+}
+
+.calc-form {
+    background: #FF6600;
+    color: #ffffff;
+    padding: 2.31rem 2.68rem 8.75rem;
+}
+
+.calc-title {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+
+}
+
+.form-calc {
+    padding: 0 2.31rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 34.43rem);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5.56rem;
+    grid-row-gap: 1rem;
+    align-items: end;
+    justify-content: center;
+}
+
+.form-calc label {
+    display: flex;
+    flex-direction: column;
+
+}
+.form-calc label input {
+    margin-top: 1rem;
+    height: 3.125rem;
+    border-radius: 2rem;
+    border: 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.form-calc label input::placeholder {
+    font-size: 1rem;
+}
+.form-calc-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: #FFE500;
+    border: 0;
+    height: 3.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.form-calc-btn:disabled {
+    background-color: #949494;
+    position: relative;
+}
+.form-calc-btn:hover {
+    background-color: #ffa600;
+}
+.form-calc-btn:disabled:hover {
+    background-color: #949494;
+}
+.form-calc-btn:disabled:hover + .alarm {
+    opacity: 1;
+}
+.button-form-calc {
+    position: relative;
+}
+.alarm {
+    opacity: 0;
+    position: absolute;
+    transition: 0.2s;
+    bottom: -2rem;
+
+}
+.modal-calc.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-calc {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000bd;
+    transition: 0.3s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-call {
+    padding: 3rem 2rem;
+    background: #FF6600;
+    border-radius: 1rem;
+    color: #fff;
+}
+.call-form {
+    display: flex;
+    flex-direction: column;
+}
+.call-form label {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.call-form label input {
+    height: 3.125rem;
+    border-radius: 2rem;
+    border: 0;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.call-form label input::placeholder {
+    font-size: 1rem;
+}
+.call-form button {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: #FFE500;
+    border: 0;
+    height: 3.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.call-form button:hover {
+    background-color: #ffa600;
+}
+.form-call p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.copyright {
+    padding: 1rem 0;
+    border-top: 0.1rem solid #00000070;
+}
+.close {
+    position: absolute;
+    font-size: 5rem;
+    color: #fff;
+    top: 0;
+    right: 5rem;
+    cursor: pointer;
+}
