@@ -66,3 +66,19 @@ function closeModal() {
     document.body.classList.remove('modal');
     modalCall.classList.remove('open');
 }
+
+
+//mobile
+const navMobile = document.getElementById('nav-mobile');
+const modalMenu = document.querySelector('.modal-menu');
+
+navMobile.addEventListener('click', () => {
+    navMobile.classList.toggle('menu-close');
+    modalMenu.classList.toggle('open');
+});
+modalMenu.querySelectorAll('.nav-item').forEach((item) => {
+    item.addEventListener('click', ()=> {
+        navMobile.classList.toggle('menu-close');
+        modalMenu.classList.toggle('open');
+    })
+})

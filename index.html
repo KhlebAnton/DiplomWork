@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карлссон</title>
     <link rel="stylesheet" href="style.css">
+    <link type="Image/x-icon" href="./favicon-16x16.png" rel="icon">
 </head>
 
 <body>
+    <div class="modal-menu">
+        <ul class="nav-items">
+            <li class="nav-item" onclick=" handleButtonClick('header')">Главная</li>
+            <li class="nav-item" onclick=" handleButtonClick('services')">Услуги</li>
+            <li class="nav-item" onclick=" handleButtonClick('about')">О компании</li>
+        </ul>
+    </div>
     <header id="header">
         <div class="container">
             <nav class="nav">
@@ -19,6 +27,14 @@
                     <li class="nav-item" onclick=" handleButtonClick('about')">О компании</li>
                 </ul>
                 <div class="btn-action btn-contact" onclick="openModal()">Связаться с нами</div>
+            </nav>
+            <nav id="nav-mobile" class="nav-mobile">
+                <div class="logo"></div>
+                <div class="burger-menu">
+                    <div class="burger-line1"></div>
+                    <div class="burger-line2"></div>
+                    <div class="burger-line3"></div>
+                </div>
             </nav>
             <div class="hero">
                 <h1>

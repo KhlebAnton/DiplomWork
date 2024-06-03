@@ -8,15 +8,18 @@
 
 html {
     font-size: 1.111vw;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;  
+    overflow-x: hidden;
+
 }
 
-body{
-    overflow-x: hidden;
-}
+
+
 body.modal {
     overflow-y: hidden;
 }
+
+
 a {
     text-decoration: none;
     color: black;
@@ -93,14 +96,16 @@ nav {
     width: 30.5rem;
     justify-content: space-around;
     font-weight: bold;
-    
+
 }
+
 .nav-item {
     cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     transition: 0.2s;
 }
+
 .nav-item:hover {
     background: #0000000c;
 }
@@ -108,6 +113,21 @@ nav {
 .hero {
     margin-top: 18.3rem;
     width: 43.1rem;
+}
+.adavnt-item {
+    animation: 1s bounty infinite alternate-reverse ease-in-out;
+}
+.adavnt-item:nth-child(2n) {
+    animation: 1s bounty infinite alternate ease-in-out;
+}
+
+@keyframes bounty {
+    from {
+        transform: translateY(-5rem);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .btn-group {
@@ -192,42 +212,49 @@ main {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    
 
-    
+
+
     transition: 0.3s ease-in-out;
     cursor: pointer;
 
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right;
-    background-color:  #FF6600;
-    background-blend-mode:multiply;
-   
-    
+    background-color: #FF6600;
+    background-blend-mode: multiply;
+
+
 
 }
+
 .services-item:hover {
     background-size: auto 110%;
-    background-blend-mode:  normal ;
+    background-blend-mode: normal;
     background-color: #FF6600;
 }
+
 .services-item-one {
     background-image: url('./img/service4.png');
-    
+
 }
+
 .services-item-two {
     background-image: url('./img/service1.png');
 }
+
 .services-item-three {
     background-image: url('./img/service2.png');
 }
+
 .services-item-four {
     background-image: url('./img/service3.png');
 }
+
 .services-item-five {
     background-image: url('./img/service5.png');
 }
+
 .services-item p {
     opacity: 0;
     transition: 0.3s;
@@ -238,18 +265,18 @@ main {
     opacity: 0.8;
     transition: 0.3s ease-in-out;
     color: #fff;
-    
+
 
 }
 
-.services-item:hover p{
+.services-item:hover p {
     opacity: 1;
 }
 
 
 .services-item:hover h3 {
     opacity: 1;
-    
+
 }
 
 .services-item.title-item {
@@ -315,6 +342,7 @@ main {
     flex-direction: column;
 
 }
+
 .form-calc label input {
     margin-top: 1rem;
     height: 3.125rem;
@@ -323,9 +351,11 @@ main {
     padding: 1rem;
     font-size: 1rem;
 }
+
 .form-calc label input::placeholder {
     font-size: 1rem;
 }
+
 .form-calc-btn {
     font-size: 1rem;
     font-weight: bold;
@@ -336,22 +366,28 @@ main {
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .form-calc-btn:disabled {
     background-color: #949494;
     position: relative;
 }
+
 .form-calc-btn:hover {
     background-color: #ffa600;
 }
+
 .form-calc-btn:disabled:hover {
     background-color: #949494;
 }
-.form-calc-btn:disabled:hover + .alarm {
+
+.form-calc-btn:disabled:hover+.alarm {
     opacity: 1;
 }
+
 .button-form-calc {
     position: relative;
 }
+
 .alarm {
     opacity: 0;
     position: absolute;
@@ -359,10 +395,12 @@ main {
     bottom: -2rem;
 
 }
+
 .modal-calc.open {
     opacity: 1;
     pointer-events: all;
 }
+
 .modal-calc {
     opacity: 0;
     pointer-events: none;
@@ -378,21 +416,25 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 .form-call {
     padding: 3rem 2rem;
     background: #FF6600;
     border-radius: 1rem;
     color: #fff;
 }
+
 .call-form {
     display: flex;
     flex-direction: column;
 }
+
 .call-form label {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
 }
+
 .call-form label input {
     height: 3.125rem;
     border-radius: 2rem;
@@ -401,9 +443,11 @@ main {
     padding: 1rem;
     font-size: 1rem;
 }
+
 .call-form label input::placeholder {
     font-size: 1rem;
 }
+
 .call-form button {
     font-size: 1rem;
     font-weight: bold;
@@ -414,18 +458,22 @@ main {
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .call-form button:hover {
     background-color: #ffa600;
 }
+
 .form-call p {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
+
 .copyright {
     padding: 1rem 0;
     border-top: 0.1rem solid #00000070;
 }
+
 .close {
     position: absolute;
     font-size: 5rem;
@@ -433,4 +481,195 @@ main {
     top: 0;
     right: 5rem;
     cursor: pointer;
+}
+
+.nav-mobile {
+    display: none;
+    justify-content: space-between;
+}
+
+.burger-menu {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #00000033;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: relative;
+    z-index: 1;
+    
+}
+
+.menu-close .burger-line1 {
+    opacity: 0;
+}
+
+.menu-close .burger-line2 {
+    transform: rotate(45deg) translateX(0.1rem) translateY(-0.2rem);
+    background-color: #fff;
+}
+
+.menu-close .burger-line3 {
+    transform: rotate(-45deg) translateX(0.7rem) translateY(-0.6rem);
+    background-color: #fff;
+}
+
+.burger-menu>* {
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 5rem;
+    background-color: #000000;
+    transition: ease.3s;
+}
+.modal-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: #FF6600;
+    top: 0;
+    z-index: 1;
+    right:  -100%;
+    transition: 0.3s;
+}
+.modal-menu.open {
+    right:  0;
+    display: block;
+}
+.modal-menu .nav-items {
+    flex-direction: column;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding-top: 5rem;
+}
+.modal-menu .nav-items .nav-item {
+    margin: 1rem;
+}
+@media (max-width: 600px) and (orientation: portrait) {
+
+    html {
+        font-size: 2.1vw;
+        overflow-x: hidden;
+        
+    }
+    body > * {
+        overflow-x: hidden;
+    }
+   
+
+    .nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
+
+    .logo {
+        width: 14.3rem;
+        height: 4.35rem;
+        background: url('./img/logo (1).svg') 50% / 100% 100%;
+    }
+    
+    .hero {
+        margin-top: 18.3rem;
+        width:100%;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+    header::after {
+        content: '';
+        pointer-events: none;
+        left: 0;
+        right: 0;
+        bottom: 0rem;
+        top: 9rem;
+        position: absolute;
+        background: url('./img/image 1 (1).png') 100% 30rem / auto 35% no-repeat;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .our-advant-items {
+        padding: 0;
+        
+    }
+    .adavnt-item {
+        position: absolute;
+    }
+    .adavnt-item:first-child {
+        top: 1rem;
+    }
+    .adavnt-item:first-child + .adavnt-item {
+        top: 5rem;
+        left: 15rem;
+    }
+    .adavnt-item:first-child + .adavnt-item + .adavnt-item{
+        top: 20rem;
+        left: 20rem;
+    }
+    .main {
+        position: relative;
+    }
+    .services {
+        margin-top: 15rem;
+    }
+    .services-item {
+        min-height: 10rem;
+        transition: 0.3s;
+    }
+    .services-item:hover {
+        min-height: 20rem;
+    }
+    .services-items {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .services-item:hover p {
+        font-size: 2rem;
+    }
+    .about-desc {
+        position: relative;
+        z-index: 1;
+        padding: 1rem;
+        background-color: #ffffffec;
+        border-radius: 2rem;
+    }
+    .about-desc p {
+        font-size: 1.8rem;
+    }
+    .form-calc {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 1.8rem;
+    }
+    .form-calc-btn {
+        font-size: 1.5rem;
+        height: 5.125rem;
+    }
+    .form-calc label input {
+        margin-top: 1rem;
+        height: 5.125rem;
+        border-radius: 4rem;
+        border: 0;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .form-calc label input::placeholder {
+        font-size: 1.5rem;
+    }
+    .copyright {
+        padding: 3rem 0;
+        border-top: 0.1rem solid #00000070;
+        font-size: 2rem;
+    }
 }
